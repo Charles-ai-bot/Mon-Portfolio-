@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horloge Analogique Canvas</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="loading">
+  <div class="container" role="main" aria-labelledby="title">
+    <h1 id="title">Horloge Analogique Interactive</h1>
+
+    <div class="controls" role="toolbar" aria-label="Contrôles de l'horloge">
+      <button id="themeToggle" type="button" aria-pressed="false">Thème Sombre</button>
+      <button id="startAnimation" type="button">Démarrer Animation</button>
+      <button id="stopAnimation" type="button">Arrêter Animation</button>
+      <button id="addDecoration" type="button">Ajouter Décoration</button>
+    </div>
+
+    <div class="canvas-container" aria-hidden="false">
+      <!-- taille logique (500x500) — le script fera le scaling pour devicePixelRatio -->
+      <canvas id="monCanvas" width="500" height="500">
+        Votre navigateur ne supporte pas Canvas.
+      </canvas>
+    </div>
+
+    <div class="info" aria-live="polite">
+      <p>Heure actuelle : <span id="currentTime">--:--:--</span></p>
+      <p>Décorations : <span id="decorationCount">0</span></p>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

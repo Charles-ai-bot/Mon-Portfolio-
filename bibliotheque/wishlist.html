@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Liste de Lecture - Bibliothèque</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">Bibliothèque</h1>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="wishlist.html">Ma Liste</a></li>
+                    <li><a href="admin.html">Administration</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="wishlist-section">
+            <h2>Ma Liste de Lecture</h2>
+            <div id="wishlist-content">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Chargement de votre liste...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Bibliothèque. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/wishlist.js"></script>
+    <script src="js/auth-ui.js"></script>
+</body>
+</html>

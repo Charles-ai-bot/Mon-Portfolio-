@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Livres - Bibliothèque</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">Bibliothèque</h1>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="books.html" class="active">Gestion Livres</a></li>
+                    <li><a href="wishlist.html">Ma Liste</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="books-section">
+            <h2>Gestion de la Collection de Livres</h2>
+            
+            <div class="user-actions">
+                <button onclick="showAddBookForm()" class="btn btn-primary">+ Ajouter un livre</button>
+            </div>
+
+            <!-- Formulaire d'ajout/modification -->
+            <div id="bookForm" class="form-card" style="display: none;">
+                <h3 id="formTitle">Ajouter un livre</h3>
+                <form id="bookFormElement">
+                    <input type="hidden" id="bookId" name="id">
+                    <div class="form-group">
+                        <label for="titre">Titre *</label>
+                        <input type="text" id="titre" name="titre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="auteur">Auteur *</label>
+                        <input type="text" id="auteur" name="auteur" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="maison_edition">Maison d'édition</label>
+                        <input type="text" id="maison_edition" name="maison_edition">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre_exemplaire">Nombre d'exemplaires *</label>
+                        <input type="number" id="nombre_exemplaire" name="nombre_exemplaire" min="0" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" onclick="hideBookForm()" class="btn btn-secondary">Annuler</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Liste des livres -->
+            <div id="booksList">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Chargement des livres...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Bibliothèque. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/books.js"></script>
+    <script src="js/auth-ui.js"></script>
+</body>
+</html>

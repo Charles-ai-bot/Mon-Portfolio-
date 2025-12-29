@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Livre - Bibliothèque</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">Bibliothèque</h1>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="wishlist.html">Ma Liste</a></li>
+                    <li><a href="admin.html">Administration</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div id="book-details">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Chargement des détails...</p>
+            </div>
+        </div>
+        
+        <div id="loginRequired" class="login-required" style="display: none;">
+            <h3>Connexion requise</h3>
+            <p>Vous devez être connecté pour ajouter des livres à votre liste.</p>
+            <div class="auth-actions">
+                <a href="login.html" class="btn btn-primary">Se connecter</a>
+                <a href="register.html" class="btn btn-secondary">Créer un compte</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Bibliothèque. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/details.js"></script>
+    <script src="js/auth-ui.js"></script>
+</body>
+</html>
